@@ -1,0 +1,22 @@
+mixin form-text(id,val)
+    label(for="fName") First Name
+    input(type="text", name="First Name" id=id value=val)
+    
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Mixin Form
+        +value(x)
+    body
+
+        //- adding form fields using mixins
+        form(action="" method="POST")
+            +form-text("fName","helllo")
+
+        //- both inside and outside declaration of mixin in the body is working
+        -var myName="Gargi";
+        mixin paragraph(name)
+            p hello #{name}, Welcome to Pug;
+        +paragraph(myName)

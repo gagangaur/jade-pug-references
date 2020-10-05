@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title If-Else
+    body
+        h1 Showcasing if and else statement in pug/jade
+        - let user = {name:"gagan" ,loggedIn:true,lastLogin:6}
+
+        if user.loggedIn
+            p
+                //- if you remove beloow pipe " | " sign then welcome will be treated as tag or you can use . after the above tag 
+                |Welcome back user , 
+                |strong #{user.name}
+                |Hello HIii
+        else if user.lastLogin<10
+            p.
+               Your session is expired user
+               Your last login was #{user.lastLogin} minutes ago
+            p
+                a(href="/login") Login Again 
+        else
+            a(href="/login") Log In

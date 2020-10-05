@@ -1,0 +1,18 @@
+extends layout
+include include-mixin
+block headContent
+        title accenture jade
+block bodyContent
+        form(action='' method='POST')
+            +forTextInput("fName","First Name")
+            +forTextInput("lName","Last Name")
+            select(name="myList")
+                +option("Designation")
+                +option("Engineer")
+                +option("Doctor")
+            ul
+                li alpha
+                li beta
+                li gamma
+                li theta 
+                li anna

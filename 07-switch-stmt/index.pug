@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Switch Statement
+    body
+        h2 Switch Statement 
+
+        //- orderStatus => Delivered || Returned || Shipped
+        -const orderStatus = 'Delivered'
+
+        case orderStatus
+            when 'Delivered'
+                p Your order has been delivered
+            when 'Returned'
+                p Your order has returned 
+            when 'Shipped'
+                p Your order has been shipped and on its way to destination
+            default 
+                p Your order is lost

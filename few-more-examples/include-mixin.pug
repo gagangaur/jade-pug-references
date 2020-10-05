@@ -1,0 +1,7 @@
+//- seperate file for mixins so they can be imported where ever used
+mixin forTextInput(id,val)
+    label(for=id) #{val}
+    input(type="text", name=val, id=id)
+    
+mixin option(val)
+    option(value=val) #{val}

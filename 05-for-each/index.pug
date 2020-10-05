@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title For-Each
+    body
+        h1 FOR/EACH loop
+        -const arr = [1,2,3,4,5]
+        for number in arr
+            p= number
+        
+
+        -var names = ["ironman","spiderman","captain"]
+        for name, index in names
+            p= name + " at index " + index
+        
+        //- we can use else with for too 
+        -let object = {"1":"one","2":"two","3":"three"}
+        for value, key in object
+            p= "The key is "+key+" and the value is "+value
+        else
+            strong No Values to print
